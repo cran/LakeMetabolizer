@@ -7,7 +7,7 @@ if(getRversion() >= "2.15.1")  utils::globalVariables("jags")
 bayes.makeModel <- function(k.gas){
   
 	if(!requireNamespace("R2jags")){
-    stop('metab.bayesian requires R2jags')
+    stop("metab.bayesian requires R2jags.\ninstall.packages('R2jags')\n #Also install JAGS (http://mcmc-jags.sourceforge.net/)")
 	}
 	
 	finite.1oK <- is.finite(1/k.gas)
@@ -193,13 +193,19 @@ bayesFit <- function(data, params, mf, tend="median", ...){ #function that write
 #'@param wtr Vector of water temperatures in \eqn{^{\circ}C}{degrees C}. Used in scaling respiration with temperature
 #'@param priors Parameter priors supplied as a named numeric vector (example: c("gppMu"=0, "gppSig2"=1E5, "rMu"=0, "rSig2"=1E5, "kSig2"=NA))
 #'@param ... additional arguments; currently "datetime" is the only recognized argument passed through \code{...}
-#'@return
-#'A data.frame with columns corresponding to components of metabolism 
-#'\describe{
-	#'\item{GPP}{numeric estimate of Gross Primary Production, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}
-	#'\item{R}{numeric estimate of Respiration, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}
-	#'\item{NEP}{numeric estimate of Net Ecosystem production, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}
-#'}
+#' @return
+#' A list of length 4 with components:
+	#' \item{model}{the jags model, including posterior draws (see \link[R2jags]{jags})}
+	#' \item{params}{parameter estimates of interest from model (medians)}
+	#' \item{metab.sd}{standard deviation of metabolism estimates}
+	#' \item{metab}{daily metabolism estimates as a data.frame with columns corresponding to
+	#' \describe{
+		#' \item{\code{GPP}}{numeric estimate of Gross Primary Production, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}  
+		#' \item{\code{R}}{numeric estimate of Respiration, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}  
+		#' \item{\code{NEP}}{numeric estimate of Net Ecosystem production, \eqn{mg O_2 L^{-1} d^{-1}}{mg O2 / L / d}}  
+	#' }}
+
+
 #'@references
 #'Holtgrieve, Gordon W., Daniel E. Schindler, Trevor a. Branch, and Z. Teresa A'mar. 
 #'2010. \emph{Simultaneous Quantification of Aquatic Ecosystem Metabolism and Reaeration 
@@ -209,6 +215,9 @@ bayesFit <- function(data, params, mf, tend="median", ...){ #function that write
 #'@seealso
 #'\link{metab.mle}, \link{metab.bookkeep}, \link{metab.kalman}
 #'@author Ryan Batt, Luke A. Winslow
+#'
+#'@importFrom stats sd density median
+#'
 #'@examples
 #'\dontrun{
 #'library(rLakeAnalyzer)

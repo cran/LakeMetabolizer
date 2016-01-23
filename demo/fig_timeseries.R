@@ -62,7 +62,7 @@ height = 8
 l_mar = 0.35
 b_mar = 0.1
 t_mar = 0.05
-r_mar= 0.05
+r_mar= 0.08
 gapper = 0.15 # space between panels
 
 # figure saved at home folder 
@@ -81,6 +81,7 @@ plot(ts.data$thermo.depth~ts.data$datetime, type='l',
 lines(ts.data$z.mix~ts.data$datetime,col=cols[7],lty=2)
 lines(ts.data$meta.bot~ts.data$datetime,col=cols[7],lty=2)
 add_axes(xlim, ylim, panel.txt='a)')
+add_axes(xlim,rev(ylim),ylabel=NA,panel.txt='')
 
 
 # schmidt 
@@ -93,14 +94,14 @@ add_axes(xlim, ylim, panel.txt='b)')
 # PAR 
 ylim = c(min(ts.data$par),max(ts.data$par))
 plot(ts.data$par~ts.data$datetime, type='l',
-     col=cols[6], ylim=ylim,xaxt = 'n', ylab=expression(PAR~(paste(mu,mol,sep='')~m^-2~sec^-1)),
+     col=cols[6], ylim=ylim,xaxt = 'n', ylab=expression(PAR~(paste(mu,mol,sep='')~m^-2~s^-1)),
      xlab='', axes=FALSE)
 add_axes(xlim, ylim, panel.txt='c)')
 
 # U10 
 ylim = c(min(ts.data$wnd_10),max(ts.data$wnd_10))
 plot(ts.data$wnd_10~ts.data$datetime, type='l',
-     col=cols[7], ylim=ylim,xaxt = 'n', ylab=expression(U10~(m~sec^-1)),
+     col=cols[7], ylim=ylim,xaxt = 'n', ylab=expression(U10~(m~s^-1)),
      xlab='', axes=FALSE)
 add_axes(xlim, ylim, panel.txt='d)')
 
