@@ -1,5 +1,6 @@
-935a73348b73fe62d181ace4a3962d92 *DESCRIPTION
+edb74dac3ebed319da829470f283a77c *DESCRIPTION
 8aa60fe1fcdfea5ad890012be5b1b128 *NAMESPACE
+5e1153103c0efd362d30e46843cae7b4 *NEWS.md
 62fd9e0dcf8679b86b6e3019866f3fb7 *R/addNAs.R
 dca5d2933fea9d7692117705ab53791b *R/byeShort.R
 e5832efbbb6d952582606de809e8c572 *R/calc.lw.net.R
@@ -19,7 +20,7 @@ bfd98eae9abd5580a298e9129566fce0 *R/k600.2.kGAS.R
 cb61e7d62202f5693ac510112504b52d *R/load.meta.R
 5ab30d1c2848d909c465bb94c0c42f28 *R/metab.R
 67e3f76aeb3046026bd711431c4ad3a6 *R/metab.bayesian.R
-f656f947a387ae8e0cd511bc7ac7959e *R/metab.bookkeep.R
+6feed968832316c2207692429a774bda *R/metab.bookkeep.R
 d9425210893b33d1b9aaadd746bcdeb9 *R/metab.kalman.R
 3b69082dc0949e4282aaf471d5ea6ea9 *R/metab.mle.R
 b39e3f1a646cb6f3536821cf474bfb2c *R/metab.ols.R
@@ -33,6 +34,7 @@ f5169e152f346e0b48edf2493c26087a *demo/00Index
 93dc111cdedfdfac56e92223a9d6ba01 *demo/fig_k600.R
 000feb5d773f75a55eed858d9c769b00 *demo/fig_metab.R
 ed74204588f495b49d94c6db109487fc *demo/fig_timeseries.R
+08f37d41716e01a8d5cd8ad8bd935d1b *inst/CITATION
 c862fc4c99376d9fc1c660c81fee3e3b *inst/extdata/mendota.doobs
 83d716120097e583e1fdaca1852640b2 *inst/extdata/mendota.meta
 42a73ef99531dc97c69124a930a7a050 *inst/extdata/mendota.par
