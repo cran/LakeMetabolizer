@@ -1,10 +1,10 @@
 Package: LakeMetabolizer
 Title: Tools for the Analysis of Ecosystem Metabolism
-Maintainer: Jake Zwart <jayzlimno@gmail.com>
-Version: 1.5.5
+Maintainer: Jacob Zwart <jayzlimno@gmail.com>
+Version: 1.5.6
 Authors@R: c(person("Luke", "Winslow", role = c("aut"),
                     email = "lawinslow@gmail.com"),
-             person("Jake", "Zwart", role = c("cre", "aut"),
+             person("Jacob", "Zwart", role = c("cre", "aut"),
                     email = "jayzlimno@gmail.com",
                     comment = c(ORCID = "0000-0002-3870-405X")),
              person("Ryan", "Batt", role = "aut"),
@@ -32,12 +32,12 @@ Depends: R (>= 2.15.0), rLakeAnalyzer (>= 1.4)
 Repository: CRAN
 BugReports: https://github.com/GLEON/LakeMetabolizer/issues
 URL: https://www.tandfonline.com/doi/abs/10.1080/IW-6.4.883
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2022-11-14 15:00:36 UTC; jzwart
+Packaged: 2025-10-30 20:12:57 UTC; jzwart
 Author: Luke Winslow [aut],
-  Jake Zwart [cre, aut] (<https://orcid.org/0000-0002-3870-405X>),
+  Jacob Zwart [cre, aut] (ORCID: <https://orcid.org/0000-0002-3870-405X>),
   Ryan Batt [aut],
   Jessica Corman [aut],
   Hilary Dugan [aut],
@@ -45,4 +45,4 @@ Author: Luke Winslow [aut],
   Aline Jaimes [aut],
   Jordan Read [aut],
   Richard Woolway [aut]
-Date/Publication: 2022-11-15 23:30:16 UTC
+Date/Publication: 2025-10-30 20:30:02 UTC
